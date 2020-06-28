@@ -24,10 +24,10 @@ app.use(require('./routes/post'))
 app.use(require('./routes/user'))
 
 if(process.env.NODE_ENV == "production"){
-    app.use(express.static("frontend/build/"))
+    app.use(express.static("client/build/"))
     const path = require("path")
     app.get("*",(request, response)=>{
-        response.sendFile(path.resolve(__dirname,"frontend","bluid","index.html"))
+        response.sendFile(path.resolve(__dirname,"client","bluid","index.html"))
     })
 }
 
