@@ -96,8 +96,8 @@ const Profile = () => {
             }}
           >
             <h5>{mypics.length} posts</h5>
-            <h5>{state ? state.followers.length : "0"} followers</h5>
-            <h5>{state ? state.following.length : "0"} following</h5>
+            <h5>{state ? state.followers.length : "0"} Amis</h5>
+            <h5>{state ? state.following.length : "0"} Mes amis</h5>
           </div>
         </div>
       </div>

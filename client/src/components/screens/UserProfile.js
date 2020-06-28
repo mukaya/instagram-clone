@@ -86,16 +86,16 @@ const UserProfile = () => {
                     <h5>{userProfile.user.email}</h5>
                     <div style={{display:"flex",justifyContent:"space-between", width:"108%"}}>
                         <h5>{userProfile.posts.length} posts</h5>
-                        <h5>{userProfile.user.followers.length} followers</h5>
-                        <h5>{userProfile.user.following.length} following</h5>
+                        <h5>{userProfile.user.followers.length} Amis</h5>
+                        <h5>{userProfile.user.following.length} Mes amis</h5>
                     </div>
                     {showFollow?
                     <button style={{margin:"10px"}} onClick={()=>followUser()} className="btn waves-effect waves-light">
-                    follow
+                    suivre
                     </button>
                     :
                     <button style={{margin:"10px"}} onClick={()=>unfollowUser()} className="btn waves-effect waves-light">
-                            unfollow
+                            ne pas suivre
                     </button>
                     }                  
                 </div>

@@ -8,30 +8,30 @@ const NavBar = () => {
   const renderList = () => {
     if(state){
       return [
-        <li><Link to="/profile">Profile</Link></li>,
-        <li><Link to="/create">Create</Link></li>,
-        <li><Link to="/myfollowingpost">my following posts</Link></li>,
+        <li><Link to="/profile">Profil</Link></li>,
+        <li><Link to="/create">Crée un post</Link></li>,
+        <li><Link to="/myfollowingpost">les posts des mes amis</Link></li>,
         <li>
            <button onClick={()=>{
              localStorage.clear()
              dispatch({type:"CLEAR"})
              history.push("/signin")
            }} className="btn red daken-3">
-              logaout
+              Déconnection
            </button>
         </li>
       ]
     }else{
       return [
-        <li><Link to="/signin">Login</Link></li>,
-        <li><Link to="/signup">Signup</Link></li>
+        <li><Link to="/signin">Connection</Link></li>,
+        <li><Link to="/signup">Inscription</Link></li>
       ]
     }
   }
     return (
         <nav>
         <div className="nav-wrapper white">
-          <Link to={state?"/":"/signin"} className="brand-logo">Instragram</Link>
+          <Link to={state?"/":"/signin"} className="brand-logo">Osee-sociaux</Link>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
             {renderList()}
           </ul>
