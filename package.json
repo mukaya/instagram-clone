@@ -5,7 +5,7 @@
   "main": "node app.js",
   "scripts": {
     "start": "node app.js",
-    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "Osée Mukaya",
   "license": "ISC",
